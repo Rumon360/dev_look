@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #111111;
+    --primary: #545cff;
+    --primary-foreground: #1f2246;
+    --muted: #292929;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .px-container {
+    @apply px-[calc(20px+70*(100vw-576px)/1024)];
+  }
+
+  .blur-img {
+    @apply blur-[5px] transition-[filter] ease-in duration-300;
+  }
+
+  .remove-img-blur {
+    @apply blur-0 transition-[filter] ease-in duration-300;
+  }
+}
+
+.gradient-movement-clip {
+  background: -webkit-linear-gradient(
+    left,
+    var(--primary),
+    var(--primary-foreground),
+    var(--primary)
+  );
+  background-size: 1600px 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--primary),
+    var(--primary-foreground) 80%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-box-shadow {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.blue-box-shadow:hover {
+  box-shadow: 0 0 0 4px #545cff;
+  -webkit-box-shadow: 0 0 0 4px #545cff;
+  -moz-box-shadow: 0 0 0 4px #545cff;
+}
