@@ -11,7 +11,7 @@ type Props = {
 };
 
 function Services({ serviceSection }: Props) {
-  const description = serviceSection.description;
+  const description = serviceSection.description ?? "";
   const descriptionLines = description.split(". ").map((line) => line.trim());
 
   return (

@@ -40,8 +40,8 @@ function Service({ serviceSection }: Props) {
       ref={container}
       className="flex flex-col pb-12 border-b border-gray-500"
     >
-      {serviceSection.services.map((service: any) => (
-        <EachService key={service.id} service={service} />
+      {serviceSection.services.map((service: any, index) => (
+        <EachService key={index} service={service} />
       ))}
     </div>
   );
