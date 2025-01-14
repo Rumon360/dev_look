@@ -50,7 +50,7 @@ export const logoutAction = async () => {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production" ? true : false,
   });
-  redirect("/login");
+  return redirect("/login");
 };
 
 export const getToken = async () => {

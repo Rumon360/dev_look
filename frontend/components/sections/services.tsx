@@ -35,21 +35,21 @@ function Services({ serviceSection }: Props) {
         <div className="pt-6 flex items-end justify-between w-full">
           <LineSlideIn
             element="p"
-            containerClass="max-w-[35.625rem]"
+            containerClass="max-w-[35rem]"
             className="text-[1.469rem]"
             lines={descriptionLines}
           />
           <AnimateInWrapper>
-            <div className="space-x-4">
+            <div className="space-x-4 flex">
               <Button
                 size={"lg"}
-                className="border border-primary bg-transparent rounded-full text-[1.469rem]"
+                className="border border-primary bg-transparent rounded-full text-[1.3rem] xl:text-[1.469rem]"
               >
                 {serviceSection.num_of_projects}+ Projects
               </Button>
               <Button
                 size={"lg"}
-                className="border border-primary bg-transparent rounded-full text-[1.469rem]"
+                className="border border-primary bg-transparent rounded-full text-[1.3rem] xl:text-[1.469rem]"
               >
                 {serviceSection.num_of_awards} Awards
               </Button>

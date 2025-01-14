@@ -10,9 +10,11 @@ import Services from "@/components/sections/services";
 import Testimonials from "@/components/sections/testimonials";
 import Work from "@/components/sections/work";
 import Bar from "@/components/ui/bar";
+import useIsMobile from "@/hooks/use-is-mobile";
 import { ServicesSectionFormValues } from "@/schemas/service";
 import { WorkSectionFormValues } from "@/schemas/work";
 import { useState } from "react";
+import MobieView from "./mobile-view";
 
 type Props = {
   serviceSection: ServicesSectionFormValues;
@@ -20,7 +22,12 @@ type Props = {
 };
 
 function Home({ serviceSection, workSection }: Props) {
+  const isMobile = useIsMobile();
   const [isLoading, setIsLoading] = useState(true);
+
+  if (isMobile) {
+    return <MobieView />;
+  }
 
   if (isLoading)
     return <LoadingAnimation onAnimationComplete={() => setIsLoading(false)} />;
