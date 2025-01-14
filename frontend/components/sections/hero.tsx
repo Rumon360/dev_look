@@ -73,7 +73,7 @@ function Hero() {
             <SlideInOut
               label="Case Studies"
               variant={"primary"}
-              size={"large"}
+              size={"lg"}
               className="transition-transform hover:scale-105 ease-in-out duration-300 text-2xl text-white rounded-full"
             />
           </div>
