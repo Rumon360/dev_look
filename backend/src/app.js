@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
+const serverless = require("serverless-http");
 
 require("dotenv").config();
 
@@ -29,4 +30,5 @@ app.use("/api/v1", api);
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
 
-module.exports = app;
+module.exports.handler = serverless(app);
+// module.exports = app;
