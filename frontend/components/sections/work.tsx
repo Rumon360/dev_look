@@ -19,7 +19,7 @@ function Work({ workSection }: Props) {
   const container = useRef(null);
   const worksContainer = useRef(null);
 
-  console.log(workSection);
+  // console.log(workSection);
 
   useGSAP(
     () => {

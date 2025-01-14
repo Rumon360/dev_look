@@ -244,7 +244,7 @@ function OverlayMenu({ setIsMenuOpen }: Props) {
           <div className="pt-20 flex items-center justify-between w-full">
             <SocialLinks />
             <SlideInOut
-              size="large"
+              size="lg"
               label="Get in touch"
               variant="primary"
               className="text-white get-in-touch-button text-[1.469rem] font-semibold transition-transform hover:scale-105 ease-in-out duration-300"
